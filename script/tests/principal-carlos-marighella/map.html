@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d9350b38180ec102a918d736503707ec {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d9350b38180ec102a918d736503707ec" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d9350b38180ec102a918d736503707ec = L.map(
+                "map_d9350b38180ec102a918d736503707ec",
+                {
+                    center: [-22.9367, -42.9751],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8330c6e98101a84a06638471fc971ad9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8330c6e98101a84a06638471fc971ad9.addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var circle_marker_a0cea1db5074b27454331dc0ca34d573 = L.circleMarker(
+                [-22.9613655, -42.9861636],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_be0fe84b814e08275b095bafe246dca0 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_9578c5cea3eb0b134e97aaf98e07b7c1 = $(`<div id="html_9578c5cea3eb0b134e97aaf98e07b7c1" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Vitória Régia, 17 - Itaipuaçu, Maricá - RJ, 24900-000, Brazil<br><b>Latitude:</b> -22.9613655<br><b>Longitude:</b> -42.9861636<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 11<br><b>ID(s) da parada:</b> 195<br><b>Linhas:</b><br><b>E21</b> - Inoã - Recanto (Via Itaocaia)</div>`)[0];
+                popup_be0fe84b814e08275b095bafe246dca0.setContent(html_9578c5cea3eb0b134e97aaf98e07b7c1);
+            
+        
+
+        circle_marker_a0cea1db5074b27454331dc0ca34d573.bindPopup(popup_be0fe84b814e08275b095bafe246dca0)
+        ;
+
+        
+    
+    
+            circle_marker_a0cea1db5074b27454331dc0ca34d573.bindTooltip(
+                `<div>
+                     Av. Vitória Régia, 17 - Itaipuaçu, Maricá - RJ, 24900-000, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9e6f414d6356095ff610ff5eef37a29 = L.circleMarker(
+                [-22.960099, -42.9846171],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_f8d25fa8c7349a7932efd8f35deccace = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_c7428d15dff32eadf0557b283cbbc1fa = $(`<div id="html_c7428d15dff32eadf0557b283cbbc1fa" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Vitória Régia, 201 - Itaipuaçu, Maricá - RJ, 24900-000, Brazil<br><b>Latitude:</b> -22.960099<br><b>Longitude:</b> -42.9846171<br><b>Sentido(s):</b> Recanto<br><b>Ordem da parada(s):</b> 75<br><b>ID(s) da parada:</b> 492<br><b>Linhas:</b><br><b>E30</b> - Rodoviária - Recanto (Via Flamengo)</div>`)[0];
+                popup_f8d25fa8c7349a7932efd8f35deccace.setContent(html_c7428d15dff32eadf0557b283cbbc1fa);
+            
+        
+
+        circle_marker_b9e6f414d6356095ff610ff5eef37a29.bindPopup(popup_f8d25fa8c7349a7932efd8f35deccace)
+        ;
+
+        
+    
+    
+            circle_marker_b9e6f414d6356095ff610ff5eef37a29.bindTooltip(
+                `<div>
+                     Av. Vitória Régia, 201 - Itaipuaçu, Maricá - RJ, 24900-000, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da11a262bc23cefc4deba74f9000c306 = L.circleMarker(
+                [-22.9589425, -42.9826691],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_d6cf5bfd52bd2815480c3efdad018083 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ec5948c91e36efa9f69a130cdec93e39 = $(`<div id="html_ec5948c91e36efa9f69a130cdec93e39" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Avenida Carlos Marighella, Barroco, Itaipuaçu, Maricá, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, 24936-130, Brasil<br><b>Latitude:</b> -22.9589425<br><b>Longitude:</b> -42.9826691<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 3<br><b>ID(s) da parada:</b> 113<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_d6cf5bfd52bd2815480c3efdad018083.setContent(html_ec5948c91e36efa9f69a130cdec93e39);
+            
+        
+
+        circle_marker_da11a262bc23cefc4deba74f9000c306.bindPopup(popup_d6cf5bfd52bd2815480c3efdad018083)
+        ;
+
+        
+    
+    
+            circle_marker_da11a262bc23cefc4deba74f9000c306.bindTooltip(
+                `<div>
+                     Avenida Carlos Marighella, Barroco, Itaipuaçu, Maricá, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, 24936-130, Brasil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b3296962d66576ffc95d1a6e1dcc63f = L.circleMarker(
+                [-22.9535809, -42.9755593],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_b6055f62bed3eacf0f4480d2bef5053c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_624fc3f6e00b173f7d4ae4e1882ed547 = $(`<div id="html_624fc3f6e00b173f7d4ae4e1882ed547" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 168 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9535809<br><b>Longitude:</b> -42.9755593<br><b>Sentido(s):</b> Recanto<br><b>Ordem da parada(s):</b> 39<br><b>ID(s) da parada:</b> 690<br><b>Linhas:</b><br><b>E32</b> - Recanto - Rua 128 (Via Estrada de Itaipuaçu)</div>`)[0];
+                popup_b6055f62bed3eacf0f4480d2bef5053c.setContent(html_624fc3f6e00b173f7d4ae4e1882ed547);
+            
+        
+
+        circle_marker_3b3296962d66576ffc95d1a6e1dcc63f.bindPopup(popup_b6055f62bed3eacf0f4480d2bef5053c)
+        ;
+
+        
+    
+    
+            circle_marker_3b3296962d66576ffc95d1a6e1dcc63f.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 168 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_064ee5a26bc9d83afea6d22c6b5887cb = L.circleMarker(
+                [-22.9522534, -42.9734862],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_1286f41695a2b581a37dbd6d509bcb3d = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ce08d6a31e84d2da28034ffe84f76e67 = $(`<div id="html_ce08d6a31e84d2da28034ffe84f76e67" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 17 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9522534<br><b>Longitude:</b> -42.9734862<br><b>Sentido(s):</b> Recanto<br><b>Ordem da parada(s):</b> 38<br><b>ID(s) da parada:</b> 689<br><b>Linhas:</b><br><b>E32</b> - Recanto - Rua 128 (Via Estrada de Itaipuaçu)</div>`)[0];
+                popup_1286f41695a2b581a37dbd6d509bcb3d.setContent(html_ce08d6a31e84d2da28034ffe84f76e67);
+            
+        
+
+        circle_marker_064ee5a26bc9d83afea6d22c6b5887cb.bindPopup(popup_1286f41695a2b581a37dbd6d509bcb3d)
+        ;
+
+        
+    
+    
+            circle_marker_064ee5a26bc9d83afea6d22c6b5887cb.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 17 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_67b76928b7a66b9117fe3180455e31b7 = L.circleMarker(
+                [-22.9505964, -42.9715937],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_ad64f89b346fbdb0159192c0b87f836e = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_c1fb4406b06fc6f0b6efd1b30056eb81 = $(`<div id="html_c1fb4406b06fc6f0b6efd1b30056eb81" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 169 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9505964<br><b>Longitude:</b> -42.9715937<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 33<br><b>ID(s) da parada:</b> 217<br><b>Linhas:</b><br><b>E21</b> - Inoã - Recanto (Via Itaocaia)</div>`)[0];
+                popup_ad64f89b346fbdb0159192c0b87f836e.setContent(html_c1fb4406b06fc6f0b6efd1b30056eb81);
+            
+        
+
+        circle_marker_67b76928b7a66b9117fe3180455e31b7.bindPopup(popup_ad64f89b346fbdb0159192c0b87f836e)
+        ;
+
+        
+    
+    
+            circle_marker_67b76928b7a66b9117fe3180455e31b7.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 169 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb621cd641bc50939c497829e6dab269 = L.circleMarker(
+                [-22.9455739, -42.963386],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_859314fbc15b9fceab951d6c0098f334 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_f034d829c58f09ca716ed21a7b9bd0b7 = $(`<div id="html_f034d829c58f09ca716ed21a7b9bd0b7" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 595 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9455739<br><b>Longitude:</b> -42.963386<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 32<br><b>ID(s) da parada:</b> 216<br><b>Linhas:</b><br><b>E21</b> - Inoã - Recanto (Via Itaocaia)</div>`)[0];
+                popup_859314fbc15b9fceab951d6c0098f334.setContent(html_f034d829c58f09ca716ed21a7b9bd0b7);
+            
+        
+
+        circle_marker_bb621cd641bc50939c497829e6dab269.bindPopup(popup_859314fbc15b9fceab951d6c0098f334)
+        ;
+
+        
+    
+    
+            circle_marker_bb621cd641bc50939c497829e6dab269.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 595 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_234f4c18f0385a32b1ec67c5efd564a7 = L.circleMarker(
+                [-22.94484, -42.9626363],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_a086e2f80a5d2e3e7a2d702a7506ecaf = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_f887fe8768a6c23b2916c6f7324ff832 = $(`<div id="html_f887fe8768a6c23b2916c6f7324ff832" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 456 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.94484<br><b>Longitude:</b> -42.9626363<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 31<br><b>ID(s) da parada:</b> 215<br><b>Linhas:</b><br><b>E21</b> - Inoã - Recanto (Via Itaocaia)</div>`)[0];
+                popup_a086e2f80a5d2e3e7a2d702a7506ecaf.setContent(html_f887fe8768a6c23b2916c6f7324ff832);
+            
+        
+
+        circle_marker_234f4c18f0385a32b1ec67c5efd564a7.bindPopup(popup_a086e2f80a5d2e3e7a2d702a7506ecaf)
+        ;
+
+        
+    
+    
+            circle_marker_234f4c18f0385a32b1ec67c5efd564a7.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 456 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fff98f8e7cfbe314ca8e9f7958702ea = L.circleMarker(
+                [-22.9408327, -42.9586681],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_b88b5d9970167f20b7ad510981b68d2e = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_b2f27e87fc2ffde72ebe222e434994c9 = $(`<div id="html_b2f27e87fc2ffde72ebe222e434994c9" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 28 - Itaipuaçu, Maricá - RJ, 24940-495, Brazil<br><b>Latitude:</b> -22.9408327<br><b>Longitude:</b> -42.9586681<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 7<br><b>ID(s) da parada:</b> 411<br><b>Linhas:</b><br><b>E28</b> - Inoã - Terminal Itaipuaçu (via Cajueiros)</div>`)[0];
+                popup_b88b5d9970167f20b7ad510981b68d2e.setContent(html_b2f27e87fc2ffde72ebe222e434994c9);
+            
+        
+
+        circle_marker_9fff98f8e7cfbe314ca8e9f7958702ea.bindPopup(popup_b88b5d9970167f20b7ad510981b68d2e)
+        ;
+
+        
+    
+    
+            circle_marker_9fff98f8e7cfbe314ca8e9f7958702ea.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 28 - Itaipuaçu, Maricá - RJ, 24940-495, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6719e167343bd4ddda0cb0b75f905502 = L.circleMarker(
+                [-22.9344381, -42.9547539],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_0fe99b625f22a0cb9bc627a9425ce52f = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_4159b5001689d96c31e32903b220550a = $(`<div id="html_4159b5001689d96c31e32903b220550a" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 3 - Itaupuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9344381<br><b>Longitude:</b> -42.9547539<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 4<br><b>ID(s) da parada:</b> 114<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_0fe99b625f22a0cb9bc627a9425ce52f.setContent(html_4159b5001689d96c31e32903b220550a);
+            
+        
+
+        circle_marker_6719e167343bd4ddda0cb0b75f905502.bindPopup(popup_0fe99b625f22a0cb9bc627a9425ce52f)
+        ;
+
+        
+    
+    
+            circle_marker_6719e167343bd4ddda0cb0b75f905502.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 3 - Itaupuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fd0a4e8973e61578b992d9e18b76a92 = L.circleMarker(
+                [-22.9332678, -42.9543191],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_9478b92191f3d74612af5c2fe0a36235 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_05a1adfbc48c8bcd402ee16204be512d = $(`<div id="html_05a1adfbc48c8bcd402ee16204be512d" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 199 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9332678<br><b>Longitude:</b> -42.9543191<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 5<br><b>ID(s) da parada:</b> 115<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_9478b92191f3d74612af5c2fe0a36235.setContent(html_05a1adfbc48c8bcd402ee16204be512d);
+            
+        
+
+        circle_marker_7fd0a4e8973e61578b992d9e18b76a92.bindPopup(popup_9478b92191f3d74612af5c2fe0a36235)
+        ;
+
+        
+    
+    
+            circle_marker_7fd0a4e8973e61578b992d9e18b76a92.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 199 - Itaipuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f237dcf9b95898677c0b21c8b129429f = L.circleMarker(
+                [-22.9321321, -42.9540648],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_98a0275f3d1edde2c16a14ac552ffe67 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_03df9c1810d310285792ec7d7b659422 = $(`<div id="html_03df9c1810d310285792ec7d7b659422" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 373 - Itaupuaçu, Maricá - RJ, 24940-495, Brazil<br><b>Latitude:</b> -22.9321321<br><b>Longitude:</b> -42.9540648<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 6<br><b>ID(s) da parada:</b> 116<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_98a0275f3d1edde2c16a14ac552ffe67.setContent(html_03df9c1810d310285792ec7d7b659422);
+            
+        
+
+        circle_marker_f237dcf9b95898677c0b21c8b129429f.bindPopup(popup_98a0275f3d1edde2c16a14ac552ffe67)
+        ;
+
+        
+    
+    
+            circle_marker_f237dcf9b95898677c0b21c8b129429f.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 373 - Itaupuaçu, Maricá - RJ, 24940-495, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0142a6e34762ffae3d19dde6c4ba2eeb = L.circleMarker(
+                [-22.9309591, -42.9533997],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_f06b24ee987146ab02a5002640a2e842 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_e401ea120b7a86ba5fa891f40e435986 = $(`<div id="html_e401ea120b7a86ba5fa891f40e435986" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Avenida Carlos Marighella, Chácaras de Inoã, Inoã, Maricá, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, 24938-880, Brasil<br><b>Latitude:</b> -22.9309591<br><b>Longitude:</b> -42.9533997<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 13<br><b>ID(s) da parada:</b> 197<br><b>Linhas:</b><br><b>E21</b> - Inoã - Recanto (Via Itaocaia)</div>`)[0];
+                popup_f06b24ee987146ab02a5002640a2e842.setContent(html_e401ea120b7a86ba5fa891f40e435986);
+            
+        
+
+        circle_marker_0142a6e34762ffae3d19dde6c4ba2eeb.bindPopup(popup_f06b24ee987146ab02a5002640a2e842)
+        ;
+
+        
+    
+    
+            circle_marker_0142a6e34762ffae3d19dde6c4ba2eeb.bindTooltip(
+                `<div>
+                     Avenida Carlos Marighella, Chácaras de Inoã, Inoã, Maricá, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, 24938-880, Brasil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ed1ffbe952bde305c4073e0b05f8615 = L.circleMarker(
+                [-22.9255201, -42.9504051],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_d3d8cfdfcfbfa4f9f243031716ced811 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_1f77196eb9b6b62e6b52d33a3f8867f4 = $(`<div id="html_1f77196eb9b6b62e6b52d33a3f8867f4" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 500 - Itaupuaçu, Maricá - RJ, 24940-495, Brazil<br><b>Latitude:</b> -22.9255201<br><b>Longitude:</b> -42.9504051<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 7<br><b>ID(s) da parada:</b> 117<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_d3d8cfdfcfbfa4f9f243031716ced811.setContent(html_1f77196eb9b6b62e6b52d33a3f8867f4);
+            
+        
+
+        circle_marker_0ed1ffbe952bde305c4073e0b05f8615.bindPopup(popup_d3d8cfdfcfbfa4f9f243031716ced811)
+        ;
+
+        
+    
+    
+            circle_marker_0ed1ffbe952bde305c4073e0b05f8615.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 500 - Itaupuaçu, Maricá - RJ, 24940-495, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3bd0cbcdd0909aff1ad904de72ede6a7 = L.circleMarker(
+                [-22.9184461, -42.9338312],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_d915b296d52243e6a104b5d588fc4e59 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_4fb6c8a9e1f495221fbf021c04740c21 = $(`<div id="html_4fb6c8a9e1f495221fbf021c04740c21" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Avenida Carlos Marighella, Vila Risca Faca, Inoã, Maricá, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, 24942-285, Brasil<br><b>Latitude:</b> -22.9184461<br><b>Longitude:</b> -42.9338312<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 12<br><b>ID(s) da parada:</b> 196<br><b>Linhas:</b><br><b>E21</b> - Inoã - Recanto (Via Itaocaia)</div>`)[0];
+                popup_d915b296d52243e6a104b5d588fc4e59.setContent(html_4fb6c8a9e1f495221fbf021c04740c21);
+            
+        
+
+        circle_marker_3bd0cbcdd0909aff1ad904de72ede6a7.bindPopup(popup_d915b296d52243e6a104b5d588fc4e59)
+        ;
+
+        
+    
+    
+            circle_marker_3bd0cbcdd0909aff1ad904de72ede6a7.bindTooltip(
+                `<div>
+                     Avenida Carlos Marighella, Vila Risca Faca, Inoã, Maricá, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, 24942-285, Brasil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f37f3cf5776ea9e20e24ca5639dc9566 = L.circleMarker(
+                [-22.9171788, -42.9507319],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_1f837fef02a28edd95e5175923f118a9 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_73f4163c019d24c6433b2620f7035062 = $(`<div id="html_73f4163c019d24c6433b2620f7035062" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 211 - Itaupuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9171788<br><b>Longitude:</b> -42.9507319<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 11<br><b>ID(s) da parada:</b> 121<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_1f837fef02a28edd95e5175923f118a9.setContent(html_73f4163c019d24c6433b2620f7035062);
+            
+        
+
+        circle_marker_f37f3cf5776ea9e20e24ca5639dc9566.bindPopup(popup_1f837fef02a28edd95e5175923f118a9)
+        ;
+
+        
+    
+    
+            circle_marker_f37f3cf5776ea9e20e24ca5639dc9566.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 211 - Itaupuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bcd1e3530091ef933260274303e130a7 = L.circleMarker(
+                [-22.9164613, -42.9352068],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_fe7859e472ae56f0ef2ff459a5838714 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_fd2857c22de6ebf96063d6e880456f7b = $(`<div id="html_fd2857c22de6ebf96063d6e880456f7b" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 28 - Inoã, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9164613<br><b>Longitude:</b> -42.9352068<br><b>Sentido(s):</b> Recanto<br><b>Ordem da parada(s):</b> 60<br><b>ID(s) da parada:</b> 477<br><b>Linhas:</b><br><b>E30</b> - Rodoviária - Recanto (Via Flamengo)</div>`)[0];
+                popup_fe7859e472ae56f0ef2ff459a5838714.setContent(html_fd2857c22de6ebf96063d6e880456f7b);
+            
+        
+
+        circle_marker_bcd1e3530091ef933260274303e130a7.bindPopup(popup_fe7859e472ae56f0ef2ff459a5838714)
+        ;
+
+        
+    
+    
+            circle_marker_bcd1e3530091ef933260274303e130a7.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 28 - Inoã, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4cdcba44e0cc6d174bf3562a1d6ee4ed = L.circleMarker(
+                [-22.9150762, -42.9509802],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_fa8888eff6b2fa7c3865ec23c0244089 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_1fc28bc0d97857e22b16838b28e64433 = $(`<div id="html_1fc28bc0d97857e22b16838b28e64433" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 300a - Itaupuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9150762<br><b>Longitude:</b> -42.9509802<br><b>Sentido(s):</b> Inoã<br><b>Ordem da parada(s):</b> 40<br><b>ID(s) da parada:</b> 224<br><b>Linhas:</b><br><b>E21</b> - Inoã - Recanto (Via Itaocaia)</div>`)[0];
+                popup_fa8888eff6b2fa7c3865ec23c0244089.setContent(html_1fc28bc0d97857e22b16838b28e64433);
+            
+        
+
+        circle_marker_4cdcba44e0cc6d174bf3562a1d6ee4ed.bindPopup(popup_fa8888eff6b2fa7c3865ec23c0244089)
+        ;
+
+        
+    
+    
+            circle_marker_4cdcba44e0cc6d174bf3562a1d6ee4ed.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 300a - Itaupuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a34db29b463f8b6b0ca6e061bbbd13c = L.circleMarker(
+                [-22.9142375, -42.9371077],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_efd301f91db783620c6ecfb2cfd8fb6c = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_8cb55e42bb44b9d27ea7cac4e614d7a9 = $(`<div id="html_8cb55e42bb44b9d27ea7cac4e614d7a9" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 75 - Inoã, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.9142375<br><b>Longitude:</b> -42.9371077<br><b>Sentido(s):</b> Recanto<br><b>Ordem da parada(s):</b> 44<br><b>ID(s) da parada:</b> 462<br><b>Linhas:</b><br><b>E30</b> - Rodoviária - Recanto (Via Flamengo)</div>`)[0];
+                popup_efd301f91db783620c6ecfb2cfd8fb6c.setContent(html_8cb55e42bb44b9d27ea7cac4e614d7a9);
+            
+        
+
+        circle_marker_8a34db29b463f8b6b0ca6e061bbbd13c.bindPopup(popup_efd301f91db783620c6ecfb2cfd8fb6c)
+        ;
+
+        
+    
+    
+            circle_marker_8a34db29b463f8b6b0ca6e061bbbd13c.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 75 - Inoã, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a10dd0bb5ef114a363e58965011b1835 = L.circleMarker(
+                [-22.9135326, -42.949205],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_0214c1fb5f1c5399af2132b3e084a426 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_9dbae6fbe13f797b7726fb6dc05edaff = $(`<div id="html_9dbae6fbe13f797b7726fb6dc05edaff" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 300 - Inoã, Maricá - RJ, 24900-000, Brazil<br><b>Latitude:</b> -22.9135326<br><b>Longitude:</b> -42.949205<br><b>Sentido(s):</b> Recanto<br><b>Ordem da parada(s):</b> 50<br><b>ID(s) da parada:</b> 468<br><b>Linhas:</b><br><b>E30</b> - Rodoviária - Recanto (Via Flamengo)</div>`)[0];
+                popup_0214c1fb5f1c5399af2132b3e084a426.setContent(html_9dbae6fbe13f797b7726fb6dc05edaff);
+            
+        
+
+        circle_marker_a10dd0bb5ef114a363e58965011b1835.bindPopup(popup_0214c1fb5f1c5399af2132b3e084a426)
+        ;
+
+        
+    
+    
+            circle_marker_a10dd0bb5ef114a363e58965011b1835.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 300 - Inoã, Maricá - RJ, 24900-000, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e870beea51b38df72440fde133c5711 = L.circleMarker(
+                [-22.912868, -42.9486858],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_ac767a9bfa72dbedc7f4f0f6e74803b7 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a268eb3ea33b0d661dbcf106eaf5a9ac = $(`<div id="html_a268eb3ea33b0d661dbcf106eaf5a9ac" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 1418 - Itaupuaçu, Maricá - RJ, 24942-395, Brazil<br><b>Latitude:</b> -22.912868<br><b>Longitude:</b> -42.9486858<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 13<br><b>ID(s) da parada:</b> 123<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_ac767a9bfa72dbedc7f4f0f6e74803b7.setContent(html_a268eb3ea33b0d661dbcf106eaf5a9ac);
+            
+        
+
+        circle_marker_3e870beea51b38df72440fde133c5711.bindPopup(popup_ac767a9bfa72dbedc7f4f0f6e74803b7)
+        ;
+
+        
+    
+    
+            circle_marker_3e870beea51b38df72440fde133c5711.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 1418 - Itaupuaçu, Maricá - RJ, 24942-395, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7a16d689cacbb3c56a809a9453dd6e5 = L.circleMarker(
+                [-22.9115829, -42.946687],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_b70d3f4872b9c41a816b2ce148d6d4d8 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_f6c2bffe07188087f9c46126566c57df = $(`<div id="html_f6c2bffe07188087f9c46126566c57df" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 402 - Itaupuaçu, Maricá - RJ, 24900-000, Brazil<br><b>Latitude:</b> -22.9115829<br><b>Longitude:</b> -42.946687<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 14<br><b>ID(s) da parada:</b> 124<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_b70d3f4872b9c41a816b2ce148d6d4d8.setContent(html_f6c2bffe07188087f9c46126566c57df);
+            
+        
+
+        circle_marker_c7a16d689cacbb3c56a809a9453dd6e5.bindPopup(popup_b70d3f4872b9c41a816b2ce148d6d4d8)
+        ;
+
+        
+    
+    
+            circle_marker_c7a16d689cacbb3c56a809a9453dd6e5.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 402 - Itaupuaçu, Maricá - RJ, 24900-000, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75087edc4a483e0a0911e36696dcf983 = L.circleMarker(
+                [-22.9108602, -42.9444824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+        var popup_86d9d384cc1db8a9888325b97dabc0e9 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_d7e0c16632ef826cdfdc2a16de98263d = $(`<div id="html_d7e0c16632ef826cdfdc2a16de98263d" style="width: 100.0%; height: 100.0%;"><b>Endereço(s):</b> Av. Carlos Mariguella, 1190 - Itaupuaçu, Maricá - RJ, 24900-010, Brazil<br><b>Latitude:</b> -22.9108602<br><b>Longitude:</b> -42.9444824<br><b>Sentido(s):</b> Mcmv Inoã<br><b>Ordem da parada(s):</b> 15<br><b>ID(s) da parada:</b> 125<br><b>Linhas:</b><br><b>E16</b> - Mcmv Inoã - Mcmv Itaipuaçu</div>`)[0];
+                popup_86d9d384cc1db8a9888325b97dabc0e9.setContent(html_d7e0c16632ef826cdfdc2a16de98263d);
+            
+        
+
+        circle_marker_75087edc4a483e0a0911e36696dcf983.bindPopup(popup_86d9d384cc1db8a9888325b97dabc0e9)
+        ;
+
+        
+    
+    
+            circle_marker_75087edc4a483e0a0911e36696dcf983.bindTooltip(
+                `<div>
+                     Av. Carlos Mariguella, 1190 - Itaupuaçu, Maricá - RJ, 24900-010, Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_477522da48050569ccbbde891afebe98 = L.polyline(
+                [[-22.9589425, -42.9826691], [-22.960099, -42.9846171]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_477522da48050569ccbbde891afebe98.bindTooltip(
+                `<div>
+                     Distance: 237m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c5e94c7a73a941222fe2af818c963875 = L.polyline(
+                [[-22.960099, -42.9846171], [-22.9613655, -42.9861636]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_c5e94c7a73a941222fe2af818c963875.bindTooltip(
+                `<div>
+                     Distance: 212m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d15661079b450cfaa8dd72e468afec88 = L.polyline(
+                [[-22.9613655, -42.9861636], [-22.9535809, -42.9755593]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_d15661079b450cfaa8dd72e468afec88.bindTooltip(
+                `<div>
+                     Distance: 1388m (Very Far (>1200m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6925459764555d3d343aa95d2c88ad01 = L.polyline(
+                [[-22.9535809, -42.9755593], [-22.9522534, -42.9734862]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_6925459764555d3d343aa95d2c88ad01.bindTooltip(
+                `<div>
+                     Distance: 258m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e3373f6b991831efe49e2ff595d6cbd7 = L.polyline(
+                [[-22.9522534, -42.9734862], [-22.9505964, -42.9715937]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_e3373f6b991831efe49e2ff595d6cbd7.bindTooltip(
+                `<div>
+                     Distance: 267m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d607b95d6d16d2a35d60dd7b8f81d1d2 = L.polyline(
+                [[-22.9505964, -42.9715937], [-22.9455739, -42.963386]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_d607b95d6d16d2a35d60dd7b8f81d1d2.bindTooltip(
+                `<div>
+                     Distance: 1009m (Far (800-1200m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f1691d13c81ecfecf6bfdb40c193aa0d = L.polyline(
+                [[-22.9455739, -42.963386], [-22.94484, -42.9626363]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_f1691d13c81ecfecf6bfdb40c193aa0d.bindTooltip(
+                `<div>
+                     Distance: 112m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c4dd775469b3b26d107028844c204fe3 = L.polyline(
+                [[-22.94484, -42.9626363], [-22.9408327, -42.9586681]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_c4dd775469b3b26d107028844c204fe3.bindTooltip(
+                `<div>
+                     Distance: 602m (Medium (600-800m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a345b616264b71bf66b8bcf1c5106932 = L.polyline(
+                [[-22.9408327, -42.9586681], [-22.9344381, -42.9547539]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_a345b616264b71bf66b8bcf1c5106932.bindTooltip(
+                `<div>
+                     Distance: 814m (Far (800-1200m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e7a5413de6f3b2e09bb30f2a8923f704 = L.polyline(
+                [[-22.9344381, -42.9547539], [-22.9332678, -42.9543191]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_e7a5413de6f3b2e09bb30f2a8923f704.bindTooltip(
+                `<div>
+                     Distance: 137m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a1e9e4f0b460a6c6828a530a5106db3c = L.polyline(
+                [[-22.9332678, -42.9543191], [-22.9321321, -42.9540648]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_a1e9e4f0b460a6c6828a530a5106db3c.bindTooltip(
+                `<div>
+                     Distance: 128m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_29b7c65e618062e6bed07cf89dcf49f6 = L.polyline(
+                [[-22.9321321, -42.9540648], [-22.9309591, -42.9533997]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_29b7c65e618062e6bed07cf89dcf49f6.bindTooltip(
+                `<div>
+                     Distance: 147m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7c00331f7e072ffccd2c4239ddb06e58 = L.polyline(
+                [[-22.9309591, -42.9533997], [-22.9255201, -42.9504051]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_7c00331f7e072ffccd2c4239ddb06e58.bindTooltip(
+                `<div>
+                     Distance: 676m (Medium (600-800m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_49a18d08baeebd7626ea9f91c96933a7 = L.polyline(
+                [[-22.9255201, -42.9504051], [-22.9171788, -42.9507319]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_49a18d08baeebd7626ea9f91c96933a7.bindTooltip(
+                `<div>
+                     Distance: 924m (Far (800-1200m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_38565e8251eb9591d838d2dbae83524c = L.polyline(
+                [[-22.9171788, -42.9507319], [-22.9150762, -42.9509802]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_38565e8251eb9591d838d2dbae83524c.bindTooltip(
+                `<div>
+                     Distance: 234m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_32ede00044901cc2df76cd876fb90a78 = L.polyline(
+                [[-22.9150762, -42.9509802], [-22.9135326, -42.949205]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_32ede00044901cc2df76cd876fb90a78.bindTooltip(
+                `<div>
+                     Distance: 250m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_03c09d3117d3d44c6775773679c7a794 = L.polyline(
+                [[-22.9135326, -42.949205], [-22.912868, -42.9486858]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_03c09d3117d3d44c6775773679c7a794.bindTooltip(
+                `<div>
+                     Distance: 91m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e84ae87d46b7228bda44b6ce01ba40d2 = L.polyline(
+                [[-22.912868, -42.9486858], [-22.9115829, -42.946687]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_e84ae87d46b7228bda44b6ce01ba40d2.bindTooltip(
+                `<div>
+                     Distance: 250m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2393f4efe956c6da1b1bd48de48ea729 = L.polyline(
+                [[-22.9115829, -42.946687], [-22.9108602, -42.9444824]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_2393f4efe956c6da1b1bd48de48ea729.bindTooltip(
+                `<div>
+                     Distance: 240m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b9723b796d1060b22063f47415387203 = L.polyline(
+                [[-22.9108602, -42.9444824], [-22.9142375, -42.9371077]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_b9723b796d1060b22063f47415387203.bindTooltip(
+                `<div>
+                     Distance: 844m (Far (800-1200m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_22d118d49da7b13cd2fe4f0d0757fd7f = L.polyline(
+                [[-22.9142375, -42.9371077], [-22.9164613, -42.9352068]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_22d118d49da7b13cd2fe4f0d0757fd7f.bindTooltip(
+                `<div>
+                     Distance: 314m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e9a2094f5efdd35fafb53711ccbf8677 = L.polyline(
+                [[-22.9164613, -42.9352068], [-22.9184461, -42.9338312]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            poly_line_e9a2094f5efdd35fafb53711ccbf8677.bindTooltip(
+                `<div>
+                     Distance: 261m (Near (0-400m))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c6fe0d9a86ccb33b9ee858b9f48bc06f = L.marker(
+                [-22.9574732, -42.98086145],
+                {
+}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var icon_901ed95e37da4400c355f7cb8e02b867 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c6fe0d9a86ccb33b9ee858b9f48bc06f.bindTooltip(
+                `<div>
+                     Gap of 1388m between sequential stops
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c6fe0d9a86ccb33b9ee858b9f48bc06f.setIcon(icon_901ed95e37da4400c355f7cb8e02b867);
+            
+    
+            var marker_bbea6f20c8366efdf45d4b3a37f927e9 = L.marker(
+                [-22.948085149999997, -42.96748985],
+                {
+}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var icon_c19e40c441d5a0db23909e1ffe7a5de4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bbea6f20c8366efdf45d4b3a37f927e9.bindTooltip(
+                `<div>
+                     Gap of 1009m between sequential stops
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bbea6f20c8366efdf45d4b3a37f927e9.setIcon(icon_c19e40c441d5a0db23909e1ffe7a5de4);
+            
+    
+            var marker_b8bb1228b9bfbc48dbcc0702dfb8f90e = L.marker(
+                [-22.94283635, -42.9606522],
+                {
+}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var icon_0cf8ca4d224e84b769cb3541cb549323 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b8bb1228b9bfbc48dbcc0702dfb8f90e.bindTooltip(
+                `<div>
+                     Gap of 602m between sequential stops
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b8bb1228b9bfbc48dbcc0702dfb8f90e.setIcon(icon_0cf8ca4d224e84b769cb3541cb549323);
+            
+    
+            var marker_fa0b7865bcf3bcad11174277dbebb916 = L.marker(
+                [-22.9376354, -42.956711],
+                {
+}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var icon_f13fea62e769455e8034ea189d0ff153 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fa0b7865bcf3bcad11174277dbebb916.bindTooltip(
+                `<div>
+                     Gap of 814m between sequential stops
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa0b7865bcf3bcad11174277dbebb916.setIcon(icon_f13fea62e769455e8034ea189d0ff153);
+            
+    
+            var marker_8b6cc625e966cc9d367080015a413ac4 = L.marker(
+                [-22.928239599999998, -42.951902399999994],
+                {
+}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var icon_c8fa270d445d208ee425e6996637100a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8b6cc625e966cc9d367080015a413ac4.bindTooltip(
+                `<div>
+                     Gap of 676m between sequential stops
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b6cc625e966cc9d367080015a413ac4.setIcon(icon_c8fa270d445d208ee425e6996637100a);
+            
+    
+            var marker_91f1f45cc0e52c82fcc1ea906e0c48e8 = L.marker(
+                [-22.92134945, -42.9505685],
+                {
+}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var icon_3fc9b505ec74968522b763f15ec2bc29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_91f1f45cc0e52c82fcc1ea906e0c48e8.bindTooltip(
+                `<div>
+                     Gap of 924m between sequential stops
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_91f1f45cc0e52c82fcc1ea906e0c48e8.setIcon(icon_3fc9b505ec74968522b763f15ec2bc29);
+            
+    
+            var marker_8a91a8b01e52828e75c775a7864f8b77 = L.marker(
+                [-22.91254885, -42.94079505],
+                {
+}
+            ).addTo(map_d9350b38180ec102a918d736503707ec);
+        
+    
+            var icon_378b8366807e40f6f60b8e7c4f9b00d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8a91a8b01e52828e75c775a7864f8b77.bindTooltip(
+                `<div>
+                     Gap of 844m between sequential stops
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8a91a8b01e52828e75c775a7864f8b77.setIcon(icon_378b8366807e40f6f60b8e7c4f9b00d2);
+            
+</script>
+</html>
