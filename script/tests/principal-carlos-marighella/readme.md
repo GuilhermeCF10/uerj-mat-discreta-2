@@ -30,8 +30,10 @@ Este projeto tem como objetivo analisar a distribuição e cobertura dos pontos 
    - O popup de cada ponto mostra todas as linhas (número e nome) que atendem aquele ponto, além de outros dados relevantes.
 
 4. **Ordenação dos Pontos**
-   - Os pontos são ordenados primeiramente pela ordem de parada (`stop_order`), quando disponível.
-   - Em caso de empate ou ausência desse dado, é utilizado um algoritmo de "vizinho mais próximo" para construir um caminho sequencial fiel ao traçado da rua.
+   - Para estabelecer uma sequência lógica ao longo da via, os pontos (agrupados por coordenada geográfica única) são preparados para a construção de um caminho linear.
+   - Inicialmente, se a informação de `stop_order` (ordem da parada na linha) estiver consistentemente disponível e associada às coordenadas, ela é usada para influenciar a ordem primária dos pontos a serem considerados.
+   - Em seguida, um algoritmo de "vizinho mais próximo" constrói o caminho linear final: começando por um ponto inicial (potencialmente o primeiro da lista influenciada pelo `stop_order`), ele iterativamente conecta a parada não visitada mais próxima geograficamente.
+   - Esse processo garante que o traçado no mapa siga o fluxo da rua de forma sequencial, mesmo em trechos onde a `stop_order` possa ser ambígua, inconsistente entre diferentes linhas no mesmo ponto físico, ou totalmente ausente.
 
 5. **Construção do Diagrama Linear da Rua**
    - As arestas (linhas) são desenhadas apenas entre pontos sequenciais, formando um grafo linear (sem bifurcações ou cruzamentos).

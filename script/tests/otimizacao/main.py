@@ -8,6 +8,15 @@ import networkx as nx
 STOPS_FILE = "script/data/moovit_stops_geocoded_filtered.csv"
 MAP_CENTER_LAT, MAP_CENTER_LON = -22.9367, -42.9751
 
+# Defina as coordenadas de origem e destino desejadas aqui (latitude, longitude).
+# Se deixadas como None, o script usará a primeira e última parada do arquivo CSV.
+# Exemplo de coordenadas (extraídas do readme para demonstração):
+# USER_SOURCE_COORD = (-22.9033137, -42.9369153)
+# USER_TARGET_COORD = (-22.9008428, -42.93906579999999)
+USER_SOURCE_COORD = (-22.9672379, -42.9099213)
+USER_TARGET_COORD = (-22.9675662, -42.9707889)
+
+
 # --- Helper Functions ---
 def load_stops_data(filepath):
     """
@@ -204,8 +213,36 @@ if __name__ == "__main__":
         centrality = node_centrality_analysis(G)
 
         # --- Escolha de dois pontos para simulação ---
-        source = (df_all_stops.iloc[0]['latitude'], df_all_stops.iloc[0]['longitude'])
-        target = (df_all_stops.iloc[-1]['latitude'], df_all_stops.iloc[-1]['longitude'])
+        source = None
+        target = None
+
+        if USER_SOURCE_COORD and USER_TARGET_COORD:
+            source = USER_SOURCE_COORD
+            target = USER_TARGET_COORD
+            print(f"Usando coordenadas definidas pelo usuário: Origem={source}, Destino={target}")
+            if source not in G:
+                print(f"Erro: Nó de origem {source} não encontrado no grafo. Verifique as coordenadas.")
+                print("Abortando.")
+                exit()
+            if target not in G:
+                print(f"Erro: Nó de destino {target} não encontrado no grafo. Verifique as coordenadas.")
+                print("Abortando.")
+                exit()
+        else:
+            print("Coordenadas de usuário não definidas. Usando a primeira e última parada do CSV como padrão.")
+            if not df_all_stops.empty:
+                source = (df_all_stops.iloc[0]['latitude'], df_all_stops.iloc[0]['longitude'])
+                target = (df_all_stops.iloc[-1]['latitude'], df_all_stops.iloc[-1]['longitude'])
+                print(f"Origem padrão: {source}, Destino padrão: {target}")
+            else:
+                print("Erro: DataFrame de paradas está vazio. Não é possível definir origem/destino padrão.")
+                print("Abortando.")
+                exit()
+        
+        if source is None or target is None:
+            print("Erro: Pontos de origem e/ou destino não puderam ser definidos.")
+            print("Abortando.")
+            exit()
 
         # --- Dijkstra ---
         path_dij, cost_dij = dijkstra_shortest_path(G, source, target)

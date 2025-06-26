@@ -12,7 +12,7 @@ O **objetivo central** é criar uma representação digital e analítica da rede
 -   Fornecer uma base de dados para futuras análises de mobilidade urbana.
 
 O sistema automatiza o processo de coleta de dados, geocodificação de paradas, construção de um modelo de grafo da rede e geração de um mapa interativo.
-Adicionalmente, o sistema agora permite filtrar os dados e o mapa para uma sub-região específica (Itaipuaçu), com base em um delimitador geográfico (bounding box).
+Adicionalmente, o sistema agora permite filtrar os dados e o mapa para uma sub-região específica (Itaipuaçu), com base em um delimitador geográfico (bounding box). Os dados filtrados para sub-regiões, como Itaipuaçu, também servem como base para análises mais detalhadas e específicas, como estudos de otimização de rotas e cobertura de vias principais.
 
 ## 2. Arquitetura do Sistema
 
@@ -128,8 +128,18 @@ uerj-mat-discreta-2/
     ├── cache/                      # Diretório para armazenar dados em cache
     │   └── cached_moovit_graph.gpickle # Objeto do grafo da rede de transporte serializado
     |
-    └── map_moovit_stops.html       # Saída final: mapa HTML interativo da rede de transporte
-    └── map_moovit_stops_itaipuacu.html # Saída: mapa HTML interativo da rede filtrada para Itaipuaçu
+    ├── tests/                      # Diretório para scripts de análises específicas e testes
+    │   ├── otimizacao/             # Análise de otimização da malha de Itaipuaçu
+    │   │   ├── main.py             # Script principal da análise de otimização
+    │   │   ├── readme.md           # Documentação da análise de otimização
+    │   │   └── map.html            # Mapa gerado pela análise de otimização
+    │   └── principal-carlos-marighella/ # Análise da via principal Av. Carlos Marighella
+    │       ├── main.py             # Script principal da análise da via
+    │       ├── readme.md           # Documentação da análise da via
+    │       └── map.html            # Mapa gerado pela análise da via
+    |
+    └── map_moovit_stops.html       # Saída: mapa HTML interativo da rede de transporte completa de Maricá
+    └── map_moovit_stops_itaipuacu.html # Saída: mapa HTML interativo da rede filtrada para uma sub-região (ex: Itaipuaçu)
 ```
 
 -   **`setup.sh`**: Este script shell auxilia na configuração inicial do ambiente. Suas principais funções são:
@@ -228,7 +238,23 @@ graph TD
     T_filtered --> U;
 ```
 
-## 7. Considerações Técnicas e Limitações
+## 7. Aplicações e Análises Derivadas
+
+A partir dos dados filtrados gerados pelo fluxo principal (ex: `script/data/moovit_stops_geocoded_filtered.csv` para Itaipuaçu), são conduzidas análises mais aprofundadas e focadas. Estas análises residem no diretório `script/tests/` e possuem seus próprios scripts e documentações detalhadas:
+
+-   **Análise de Otimização da Malha de Pontos de Ônibus (Itaipuaçu)**:
+    -   Localização: `script/tests/otimizacao/`
+    -   Objetivo: Avaliar a rede de Itaipuaçu usando um grafo multimodal, calcular caminhos ótimos (Dijkstra, A*), e identificar pontos de maior centralidade.
+    -   Detalhes: Consulte `script/tests/otimizacao/readme.md`.
+
+-   **Análise da Cobertura da Via Principal (Av. Carlos Marighella, Itaipuaçu)**:
+    -   Localização: `script/tests/principal-carlos-marighella/`
+    -   Objetivo: Analisar especificamente a distribuição de pontos de ônibus ao longo da Av. Carlos Marighella, identificando gaps e sugerindo novos pontos.
+    -   Detalhes: Consulte `script/tests/principal-carlos-marighella/readme.md`.
+
+Essas análises especializadas utilizam o arquivo `moovit_stops_geocoded_filtered.csv` como sua principal entrada de dados, demonstrando como o sistema central de processamento de dados habilita estudos mais granulares.
+
+## 8. Considerações Técnicas e Limitações
 
 -   **Dependências Externas**:
     -   O sistema depende da estrutura e disponibilidade do site Moovit. Mudanças no layout do site podem quebrar o scraper.
@@ -237,7 +263,7 @@ graph TD
 -   **Escalabilidade**: Para cidades significativamente maiores, o tempo de scraping e geocodificação pode aumentar consideravelmente. O uso de cache é crucial para mitigar isso em execuções subsequentes.
 -   **Precisão da Geocodificação**: A precisão depende da qualidade dos nomes das paradas e da capacidade da API do Google de interpretá-los corretamente, mesmo com o auxílio do parâmetro `components`.
 
-## 8. Melhorias Futuras
+## 9. Melhorias Futuras
 
 -   **Robustez do Scraper**: Implementar mecanismos mais avançados para lidar com alterações no site Moovit (ex: adaptadores configuráveis).
 -   **Geocodificadores Alternativos**: Adicionar suporte a outros serviços de geocodificação (ex: Nominatim como fallback) para maior resiliência.
